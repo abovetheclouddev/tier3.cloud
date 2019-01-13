@@ -1,0 +1,5 @@
+version: 0.2
+phases:
+  post_build:
+    commands:
+      - aws s3 sync --delete website/ "s3://${BUCKET_NAME}"
